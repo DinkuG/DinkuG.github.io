@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- Create a function that accepts a string and returns the amount of times a triple exists in that string.-->
 
 <html>   <head>    
@@ -25,4 +26,33 @@
         <input type="button" onclick="fstroverlap()" value="Click" />    
     </form>    
     </body>    
+=======
+<!-- Create a function that accepts a string and returns the amount of times a triple exists in that string.-->
+
+<html>   <head>    
+    <script type="text/javascript">
+    
+        function fstroverlap(){        
+            var strtxtinput="";            
+            var subno=0;
+                        
+            strtxtinput = document.getElementById("tstring").value;   
+           for(var i = 0;i < strtxtinput.length-2;i++){
+                if((strtxtinput.charAt(i) == strtxtinput.charAt(i+1)) && (strtxtinput.charAt(i) == strtxtinput.charAt(i+2))){
+                    subno++;
+                }
+           }//for
+             document.write("Number of triples = " + subno);   
+           
+        }// function     
+    </script> </head>
+    
+    <body>    
+    <form>    
+        <p>Enter a string: </p>        
+        <input type="text" id="tstring" />        
+        <input type="button" onclick="fstroverlap()" value="Click" />    
+    </form>    
+    </body>    
+>>>>>>> 938028aa5dce82c9b3b5b15956a3775b15be60d3
     </html>​
