@@ -1,0 +1,36 @@
+<!-- Create an array with 3 strings inside of it, and output them. -->
+<!-- Then add another string to your array, and output them. -->
+<!-- Then remove the last string from the array, and output them. -->
+<html>
+    <header>
+
+    </header>
+    <body>
+        <form>
+            <p id= "parry"></p>
+            <p id= "parry2"></p>
+            <p id= "parry3"></p>
+            <p id= "parry4"></p>
+            <p id= "parry5"></p>
+            <script>
+                var arrstr = ["Welcome",  "Java", "Script"];
+
+                for(var i=0;i<arrstr.length;i++){
+                    document.getElementById("parry").innerHTML += arrstr[i];
+
+                }
+                
+                document.getElementById("parry2").innerHTML = arrstr;
+
+                arrstr[arrstr.length] = "Programming";
+                arrstr.push("Training");
+                arrstr.push("Training");
+                document.getElementById("parry4").innerHTML = arrstr;
+
+                arrstr.pop();
+                document.getElementById("parry5").innerHTML = arrstr;
+
+                </script>
+        </form>
+    </body>
+</html>

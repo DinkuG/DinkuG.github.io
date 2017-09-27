@@ -1,0 +1,33 @@
+<!-- Create a variable with “ He said “My name is Elliott” ” as the value, and display it. -->
+<!-- Using String Methods, convert this string to uppercase, and display it. -->
+<!-- Concatenate a String and a Number together, and output the result -->
+
+<html>
+    <header>
+        <script src="StringEx.js" type="text/JavaScript"></script>
+    </header>
+    <body>
+        <form>
+            <p>String Variable:</p>
+            <p id="par1"></p>
+            <p id="par2"></p>
+            <p id = "par3"></p>
+            <script>                
+                     var strtext1 = "He said ";
+                    var strtext2 = "\"";
+                    var strtext3 = "My name is Elliott";
+                    var strt = "", strupper = "";
+                    var no = 10;
+                    var so = "ABC";
+
+                    strt = strtext2 + strtext1 + strtext2 + strtext3 + strtext2 + strtext2;  
+                    strupper =  strtext2 + strtext1.toUpperCase() + strtext2 + strtext3.toUpperCase() + strtext2 +strtext2;                   
+                    document.getElementById("par1").innerHTML = strt;
+                    document.getElementById("par2").innerHTML = strupper;
+                    document.getElementById("par3").innerHTML = no+so;
+                </script>
+            
+
+        </form>
+    </body>
+</html>

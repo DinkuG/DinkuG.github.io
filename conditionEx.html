@@ -1,0 +1,31 @@
+<!-- Using conditional statements, create a function that checks if your person object is between 20-40 years old, then outputs if that fact is true or not. -->
+ 
+<!-- Create a for loop that increments from 1 to 10, outputting the current iteration at each step. -->
+ 
+<!-- Create a conditional statement inside your for loop body, which then checks whatthe current iteration is, if the current iteration is divisible by 2,  -->
+<!-- then it outputs it,otherwise it outputs nothing. -->
+
+<html>
+    <head></head>
+    <body>
+        <form>
+            <p id="pa"></p>
+            <p id="pa2"></p>
+            <script>
+                var bval; var count=1;
+                var perob = { name: "",  age: 25 };
+                function personage(){
+                    if(perob.age >20 && perob.age<40){ return true;}
+                }
+                bval = personage();
+                if(bval){document.getElementById("pa").innerHTML = "Age is between 20-40 years";}
+
+                for(var i=1; i<=10; i++){
+                    if(i%2 ===0){document.getElementById("pa2").innerHTML += i;}
+                    
+                }
+
+            </script>
+        </form>
+    </body>
+</html>
