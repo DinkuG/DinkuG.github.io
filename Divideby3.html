@@ -1,0 +1,48 @@
+
+<!-- Divide by 3 and count iterations -->
+
+<html>    
+    <head>
+    
+        <script type = "text/javascript">
+
+        
+        
+        function divbythree(){
+        
+            var niter=0, num=0;            
+            num = parseInt(document.getElementById("txtnum").value);            
+            document.write("Values of number at each stageare shown below:");            
+            document.write(num);
+            
+            do{             
+                document.write("<br />");                
+                if(num%3==0){                
+                    num=num/3;                
+                    document.write(num);                
+                  }                
+                else if((num+1)%3 == 0)
+                {                
+                    num=(num+1)/3;                
+                    document.write(num);
+                }
+                else if((num-1)%3 == 0)
+                {
+                    num=(num-1)/3;                
+                    document.write(num);
+                }           
+                                
+                niter++;            
+            }while(num>=1);            
+            document.write("<br> Number of iterations = " + niter + "</br>");            
+        }    
+        </script>    
+    </head>
+    
+    <body>    
+    <form>    
+        <input type="text" id="txtnum" />        
+        <input type="button" onclick="divbythree()" value="Click" />    
+    </form>    
+    </body>    
+    </html>​
