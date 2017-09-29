@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
 <head>
     <script>
@@ -44,4 +45,52 @@
         <input type="button" onclick="information()" value="Click" />
     </table>
 </body>
+=======
+<html>
+<head>
+    <script>
+        function information() {
+            let requestURL = 'https://raw.githubusercontent.com/ewomackqa/JSONDataRepo/master/example.json';
+            let request = new XMLHttpRequest();
+            request.open('GET', requestURL);
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+                let requestData = request.response;
+                for (let squad in requestData) {
+                    if (Array.isArray(requestData[squad])) {
+                        for (let i = 0; i < requestData[squad].length; i++) {
+                            for (let mem in requestData[squad][i]) {
+                                if (Array.isArray(requestData[squad][i][mem])) {
+                                    for (let j = 0; j < requestData[squad][i][mem].length; j++) {
+                                        let H2 = document.createElement('h4');
+                                        H2.textContent = requestData[squad][i][mem][j];
+                                        document.getElementsByTagName('body')[0].appendChild(H2);
+                                    }
+                                }
+                                else {
+                                        let H3 = document.createElement('h4');
+                                        H3.textContent = requestData[squad][i][mem];
+                                        document.getElementsByTagName('body')[0].appendChild(H3);
+                                }
+                            }
+                        }                    
+}
+                    else {
+                        let H1 = document.createElement('h4');
+                        H1.textContent = requestData[squad];
+                        document.getElementsByTagName('body')[0].appendChild(H1);
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <input type="button" onclick="information()" value="Click" />
+    </table>
+</body>
+>>>>>>> 225fc474051bc592e83ef1ba16c2ce4497664b7e
 </html>​

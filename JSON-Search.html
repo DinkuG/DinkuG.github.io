@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/kings.json -->
 
 <html>
@@ -41,4 +42,49 @@
     <input type="button" onclick="information1()" value="Click" />
 </body>
 
+=======
+<!-- https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/kings.json -->
+
+<html>
+
+<head>
+    <script>
+        function information1() {
+            let requestURL = 'https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/kings.json';
+            let request = new XMLHttpRequest();
+            request.open('GET', requestURL);
+            request.responseType = 'json';
+            request.send();
+
+            request.onload = function () {
+                let searchData = request.response;
+                let txtinput = document.getElementById("txt5").value;
+
+                for (let j = 0; j < searchData.length; j++) {
+                    for (let obj in searchData[j]) {
+                        let kinfo = searchData[j][obj];
+
+                        //search
+                        if (kinfo.toLowerCase().includes(txtinput.toLowerCase())) {
+                            for (let obj2 in searchData[j]) {
+                                let H1 = document.createElement('h4');
+                                H1.textContent = searchData[j][obj2];
+                                document.getElementsByTagName('body')[0].appendChild(H1);
+
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="txt5" />
+    <input type="button" onclick="information1()" value="Click" />
+</body>
+
+>>>>>>> 225fc474051bc592e83ef1ba16c2ce4497664b7e
 </html>​
