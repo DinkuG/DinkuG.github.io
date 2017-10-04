@@ -1,28 +1,34 @@
 <!-- Create a function that accepts a string and returns the amount of times a triple exists in that string.-->
 
-<html>   <head>    
+<html>
+
+<head>
     <script type="text/javascript">
-    
-        function fstroverlap(){        
-            var strtxtinput="";            
-            var subno=0;
-                        
-            strtxtinput = document.getElementById("tstring").value;   
-           for(var i = 0;i < strtxtinput.length-2;i++){
-                if((strtxtinput.charAt(i) == strtxtinput.charAt(i+1)) && (strtxtinput.charAt(i) == strtxtinput.charAt(i+2))){
+        function fstroverlap() {
+            var strtxtinput = "";
+            var subno = 0;
+
+            strtxtinput = document.getElementById("tstring").value;
+            for (var i = 0; i < strtxtinput.length - 2; i++) {
+                if ((strtxtinput.charAt(i) == strtxtinput.charAt(i + 1)) && (strtxtinput.charAt(i) == strtxtinput.charAt(i + 2))) {
                     subno++;
                 }
-           }//for
-             document.write("Number of triples = " + subno);   
-           
-        }// function     
-    </script> </head>
-    
-    <body>    
-    <form>    
-        <p>Enter a string: </p>        
-        <input type="text" id="tstring" />        
-        <input type="button" onclick="fstroverlap()" value="Click" />    
-    </form>    
-    </body>    
-    </html>​
+            }//for
+            //document.write("Number of triples = " + subno);
+        document.getElementById("pctrip").innerHTML = "Number of triples overlap in the String = " + subno;
+
+        }// function
+    </script>
+</head>
+
+<body>
+    <form>
+        <p>Enter a string to count number of triple overlaps: </p>
+        <input type="text" id="tstring" />
+        <input type="button" onclick="fstroverlap()" value="Click" />
+        <p></p>
+        <p id = "pctrip"></p>
+    </form>
+</body>
+
+</html>​

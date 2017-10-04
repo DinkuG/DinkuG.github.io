@@ -1,37 +1,42 @@
 <!-- Create a function that creates a paragraph tag -->
 <!-- Create another function that changes the text of that paragraph tag to what is in a textbox -->
 <!-- Create another function that deletes the paragraph tag. All of these functions should be called with a button(s) -->
-<html><body><form>
-    <div id="div1">
-        <p id="p1">This is a paragraph.</p>
-        <p id="p2">This is another paragraph.</p>
-    </div>
-    
-    <script>
-        function createpara(){
-            var para = document.createElement("p");
-            var node = document.createTextNode("This is new.");
-            para.appendChild(node);
-            
-            var element = document.getElementById("div1");
-            element.appendChild(para);
-        }
-        function changepara(){                        
-            document.getElementById("p1").innerHTML = document.getElementById("tp1").value;
+<html>
 
-        }
-        function delpara(){
-            var parent = document.getElementById("div1");
-            var child = document.getElementById("p2");
-            parent.removeChild(child);
-        }
-    </script>
+<body>
+    <form>
+        <div id="div1">
+            <p id="p1">This is a paragraph.</p>
+            <p id="p2">This is another paragraph.</p>
+        </div>
 
-    <p>
-        <input type="text" id="tp1" />
-        <input type="button" onclick="createpara()" value="Create" />
-        <input type="button" onclick="changepara()" value="Change" />
-        <input type="button" onclick="delpara()" value="Delete 1st Paragraph" />
+        <script>
+            function createpara() {
+                var para = document.createElement("p");
+                var node = document.createTextNode("This is new.");
+                para.appendChild(node);
 
-    </p>
-    </form></body></html>
+                var element = document.getElementById("div1");
+                element.appendChild(para);
+            }
+            function changepara() {
+                document.getElementById("p1").innerHTML = document.getElementById("tp1").value;
+            }
+            function delpara() {
+                var parent = document.getElementById("div1");
+                var child = document.getElementById("p2");
+                parent.removeChild(child);
+            }
+        </script>
+
+        <p>
+            <input type="text" id="tp1" />
+            <input type="button" onclick="createpara()" value="Create" />
+            <input type="button" onclick="changepara()" value="Change" />
+            <input type="button" onclick="delpara()" value="Delete 1st Paragraph" />
+
+        </p>
+    </form>
+</body>
+
+</html>
